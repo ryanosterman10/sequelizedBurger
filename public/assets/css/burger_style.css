@@ -1,0 +1,17 @@
+body{
+	background-image: url(../img/burgerBack.jpeg);
+	background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.burgerGif{
+	height: 400px;
+	width: auto;
+	border-radius: 10%;
+}
+
+.bottom{
+	margin-bottom: 50px;
+}
