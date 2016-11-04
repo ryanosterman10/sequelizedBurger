@@ -18,13 +18,13 @@ router.get('/burgers', function(req, res){
 	});
 });
 
-router.post('/burgers/create', function(req, res){
-	burger.create({ burger_name: req.body.burger_name }).then(function(){
+router.post('/create', function(req, res){
+	burger.create({ burger_name: req.body.b_name }).then(function(){
 		res.redirect('/burgers')
 	});
 });
 
-router.put('/burgers/update/:id', function(req, res){
+router.put('/update/:id', function(req, res){
 	var condition = req.params.id;
 	console.log('condition ', condition);
 	burger.update({

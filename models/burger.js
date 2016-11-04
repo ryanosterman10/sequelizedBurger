@@ -7,9 +7,7 @@ module.exports = function(sequelize, DataTypes){
 			autoIncrement: true,
 			primaryKey: true
 		},
-		burger_name: {
-			type: DataTypes.STRING,
-		},
+		burger_name: DataTypes.STRING,
 		devoured: {
 			type: DataTypes.BOOLEAN,
 			defaultValue: false
