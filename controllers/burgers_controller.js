@@ -1,13 +1,15 @@
 var express = require('express');
 var router = express.Router();
-var burgers = require('../models/burger.js');
+var methodOverride = require('method-override');
+var bodyParser = require('body-parser');
+var burger = require('../models')['burgers'];
 
 router.get('/', function(req, res){
 	res.redirect('/burgers')
 });
 
 router.get('/burgers', function(req, res){
-	burgers.all(function(data){
+	burger.findAll({}).then(function(data){
 		var hbsObject = {burgers: data};
 		console.log(hbsObject);
 		res.render('index', hbsObject);
