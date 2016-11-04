@@ -1,26 +1,29 @@
 {
-  "name": "burger",
+  "name": "sequelized-burger",
   "version": "1.0.0",
-  "description": "Burger tracker",
+  "description": "A burger logger utilizing MySQL, Node, Express, Handlebars, using the Sequelize ORM which follows the MVC design pattern",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ryanosterman10/burger.git"
-  },
-  "author": "Ryan Osterman",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ryanosterman10/burger/issues"
-  },
-  "homepage": "https://github.com/ryanosterman10/burger#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.6",
-    "mysql": "^2.11.1"
-  }
+    "mysql": "^2.12.0",
+    "sequelize": "^3.24.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanosterman10/sequelizedBurger.git"
+  },
+  "author": "Ryan Osterman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanosterman10/sequelizedBurger/issues"
+  },
+  "homepage": "https://github.com/ryanosterman10/sequelizedBurger#readme"
 }
