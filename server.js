@@ -1,6 +1,10 @@
+'use strict';
+
 var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override')
+var Sequelize = require('sequelize');
+var models = require('./models');
 
 var app = express();
 
@@ -12,7 +16,9 @@ app.use(bodyParser.urlencoded({
 }))
 // override with POST having ?_method=DELETE
 app.use(methodOverride('_method'))
+
 var exphbs = require('express-handlebars');
+
 app.engine('handlebars', exphbs({
     defaultLayout: 'main',
 }));
@@ -22,6 +28,7 @@ var routes = require('./controllers/burgers_controller.js');
 app.use('/', routes);
 
 var port = process.env.PORT || 3000;
+
 app.listen(port, function(){
 	console.log("App is running on port " + port);
 });
